@@ -1,5 +1,5 @@
 package com.example.deveki.nimbusjosesignverifyexample;
 
 public class Constants {
-	public static final String SHARED_SACRET = "AdvaitMishra"; 
+	public static final String SHARED_SACRET = "wfuwufwfgwifgwuifgwufgwufuwefgwufwf98w68269e02639x802690xe6296r2rg2iofgxui2b3fg2uoogr2igf2rt69257t2904620yw9fw9fo9wehfowefoweifweggfiwfuiwefuiw"; 
 }
