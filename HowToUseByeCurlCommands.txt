@@ -1,0 +1,11 @@
+curl -H "Content-Type: application/json" -X POST  -d {\"payload\":\"deveki\"}  http://10.142.0.7:8081/jws/sign
+{"token":"eyJhbGciOiJIUzI1NiJ9.ZGV2ZWtp.guXHvHBuX8-v99FVbgKGounMMNJcdP5VALBAIqGvM7Q","errorMsg":null}
+
+curl -H "Content-Type: application/json" -X POST  -d {\"token\":\"eyJhbGciOiJIUzI1NiJ9.ZGV2ZWtp.guXHvHBuX8-v99FVbgKGounMMNJcdP5VALBAIqGvM7Q\"}  http://10.142.0.7:8081/jws/verify
+{"status":"Verified","payload":"deveki","errorMessage":null}
+
+curl -H "Content-Type: application/json" -X POST -d '{"subject":"test work","issuer":"nikunj mishra","expTime":10,"claim_companyName":"Synechron","claim_department":"RBC","claim_salary":10000,"claim_city":"Agra"}' http://10.142.0.7:8081/signedjwt/sign
+{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IHdvcmsiLCJjaXR5IjoiQWdyYSIsImlzcyI6Im5pa3VuaiBtaXNocmEiLCJjb21wYW55IjoiU3luZWNocm9uIiwiZXhwIjoxNTM2MDUwNzE2LCJkZXBhcnRtZW50IjoiUkJDIiwic2FsYXJ5IjoxMDAwMH0.LS1VkdAAQ5hUURPPzIRtYywVf7DhqW08wIbhgY_qoIw","errorMessage":null}
+
+curl -H "Content-Type: application/json" -X POST -d '{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IHdvcmsiLCJjaXR5IjoiQWdyYSIsImlzcyI6Im5pa3VuaiBtaXNocmEiLCJjb21wYW55IjoiU3luZWNocm9uIiwiZXhwIjoxNTM2MDUwNzE2LCJkZXBhcnRtZW50IjoiUkJDIiwic2FsYXJ5IjoxMDAwMH0.LS1VkdAAQ5hUURPPzIRtYywVf7DhqW08wIbhgY_qoIw"}' http://10.142.0.7:8081/signedjwt/verify
+{"status":"Verified","data":{"companyName":"Synechron","department":"RBC","salary":10000,"city":"Agra"},"errorMessage":null}
